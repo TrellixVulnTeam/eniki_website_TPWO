@@ -236,14 +236,11 @@ ul {
     @media (max-width: 1110px) {
     }
 }
-.item-1 {
+.item-1, .item-3, .item-7 {
     grid-row: span 2;
 }
-.item-3 {
-    grid-row: span 2;
-}
-.item-7 {
-    grid-row: span 2;
+.item-38 {
+    grid-row: 2 / 4;
 }
 
 // popup
@@ -365,6 +362,7 @@ ul {
 
 // tabs
 .tabs {
+    user-select: none;
     margin: 50px 100px 50px 50px;
 
 		&__items {
