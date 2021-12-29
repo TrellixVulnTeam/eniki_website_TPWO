@@ -1,10 +1,4 @@
-
-$(document).ready(function() {
-    $('.header__burger').click(function(event) {
-        $('.header__burger,.menu').toggleClass('active');
-        $('body').toggleClass('lock')
-    });
-});
+"use strict"
 
 $(function(){
 	$(window).scroll(function(){
@@ -19,4 +13,4 @@ $(function(){
 		$('html, body').animate({scrollTop: 0}, 600);
 		return false;
 	});
-});
+});	

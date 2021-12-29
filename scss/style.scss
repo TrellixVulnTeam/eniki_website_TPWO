@@ -68,7 +68,11 @@ ul {
 
 		&__menu {
             grid-column: 1 / 3;
+            
             // border: 2px dashed grey; 
+            &-bio {
+                grid-column: 1 / 1;
+            }
 		}
 
 		&__list {
@@ -76,6 +80,17 @@ ul {
             grid-template: 1fr / 1fr 1fr 1fr 1fr;
             justify-items: center;
             li {}
+
+            &-bio {
+                display: grid;
+                grid-template: 1fr / 1fr;
+                justify-items: center;
+                align-items: center;
+                margin-top: 0;
+                margin-bottom: 0;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .2);
+            }
 		}
 
 		&__link {
@@ -154,6 +169,14 @@ ul {
             font-size: 30px;
             font-family: 'Mulish', sans-serif;
             line-height: 1.5;
+            a {
+                text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+                color: rgba(29, 73, 155, 0.8);
+
+                &:hover {
+                    color: rgb(6, 53, 141);
+                }
+            }
 		}
 
         &__img {
