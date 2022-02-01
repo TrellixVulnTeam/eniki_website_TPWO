@@ -50,9 +50,9 @@ const langArr = {
         "en": "",
     },
     "journtitle" : {
-        "ru": "",
-        "tat": "",
-        "en": "",
+        "ru": "►   Публицистика",
+        "tat": "►   Публицистика",
+        "en": "►   Publicism",
     },
     "journtext" : {
         "ru": "",
@@ -60,9 +60,9 @@ const langArr = {
         "en": "",
     },
     "gallerytitle" : {
-        "ru": "",
-        "tat": "",
-        "en": "",
+        "ru": "►   Галерея",
+        "tat": "►   Галерея",
+        "en": "►   Gallery",
     },
     "gallerytext" : {
         "ru": "",

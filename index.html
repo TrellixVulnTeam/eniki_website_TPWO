@@ -16,19 +16,19 @@
             <nav class="header__menu">
                 <ul class="header__list">
                     <li>
-                        <a href="#biography" class="header__link">&nbsp;&nbsp;&nbsp;Кто это?</a>
+                        <a href="#biography" class="header__link lng-biolink">&nbsp;&nbsp;&nbsp;Кто это?</a>
                     </li>
                     <li>
-                        <a href="#works" class="header__link">&nbsp;&nbsp;&nbsp;Произведения</a>
+                        <a href="#works" class="header__link lng-textslink">&nbsp;&nbsp;&nbsp;Произведения</a>
                     </li>
                     <li>
-                        <a href="#journ" class="header__link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Публицистика</a>
+                        <a href="#journ" class="header__link lng-journlink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Публицистика</a>
                     </li>
                     <li>
-                        <a href="#gallery" class="header__link">Галерея</a>
+                        <a href="#gallery" class="header__link lng-gallerylink">Галерея</a>
                     </li>
                     <li>
-                        <select id="" class="change-lang">
+                        <select class="change-lang">
                             <option value="ru" selected>Рус</option>
                             <option value="tat">Тат</option>
                             <option value="en">Eng</option>
@@ -39,7 +39,7 @@
             <div class="header__title">
                 <h1 class="lng-maintitle">Амирхан <br> Еники</h1>
                 <div class="header__line"></div>
-                <h2>Жизнь и творчество</h2>
+                <h2 class="lng-subtitle">Жизнь и творчество</h2>
             </div>
             <div class="header__logo"><img src="img/title_img.png" title="Амирхан Еники"></div>
         </header>
@@ -48,7 +48,7 @@
         <main class="main" id="biography">
             <section class="content">
                 <div class="content__block g">
-                    <h1 class="block__title">&#9658; Кто такой Амирхан Еники?</h1>
+                    <h1 class="block__title lng-biotitle">&#9658; Кто такой Амирхан Еники?</h1>
                         <div class="block__line"></div>
                     <div class="block__text">
                       <img src="img/gallery/19.png" title="Амирхан Еники" class="block__img">&#9658;&nbsp;&nbsp;&nbsp;Татарский народный писатель, публицист, лауреат Государственной премии РТ им. Г. Тукая <strong>Амирхан Еники</strong> <i>(1909-2000)</i> – выдающийся татарский писатель ХХ века. Он вошёл в историю татарской литературы как неповторимый в своей индивидуальности мастер-психолог, которого отличает глубокое проникновение во внутренний мир героев, подробное описание и анализ различных психологических состояний, внимание к оттенкам переживаний.
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="content__block">
-                    <h1 class="block__title">&#9658; Произведения</h1>
+                    <h1 class="block__title lng-textstitle">&#9658; Произведения</h1>
                     <div class="block__line"></div>
                     <div class="block__text">&#9658;&nbsp;&nbsp;&nbsp;В рассказах военного времени А. Еники прозвучали нотки первых изменений в литературе, которые впоследствии окажут влияние и будут идентифицированы в татарской литературе второй половины ХХ в. Такие произведения писателя как «Бала» («Девочка», 1941), «Ана һәм кыз» («Мать и дочь», 1942), «Бер генә сәгатькә» («Лишь на час», 1944), «Ялгыз каз» («Одинокий гусак», 1944), «Мәк чәчәге» («Мак», 1944) отдельным течением выделялись в общем потоке военной литературе, детально описывающей ужасающие подробности фронтовой и тыловой реальности, примеры жестокого поведения врагов, подвиги трудового народа и военных. Прозаик обращает свой взор на жанровые вариации, развивавшиеся в татарской литературе, начала ХХ века, внося в свой творческий арсенал «прозу открытий», жанр "нәсер" (лирическая проза).</div>
                     <div class="block__text">&#9658;&nbsp;&nbsp;&nbsp;Основанная на психологизме, «проза открытий» позволяет писателю быть очевидцем человеческих переживаний, их внутреннего развития, трансформации. В рамках непривычной для себя реальности со всей полнотой раскрывается глубина характера личности, определяются границы его великодушия, чувства сострадания; военные события, функционирующие в художественной реальности в качестве временного хронотопа действия, противопоставляются общечеловеческим ценностям, человечеству в целом.</div>
@@ -69,7 +69,7 @@
                     <div class="block__text block__subtext" id="journ">&#128712;&nbsp;Это безопасно.</div>
                 </div>
                 <div class="content__block g">
-                    <h1 class="block__title">&#9658; Публицистика</h1>
+                    <h1 class="block__title lng-journtitle">&#9658; Публицистика</h1>
                     <div class="block__line"></div>
                     <div class="block__text">&#9658;&nbsp;&nbsp;&nbsp;Вы можете скачать сборник публицистических рассказов А. Еники:</div>
                     <div class="block__text block__download-button"><a href="files/5.doc" download title="Скачать файл"><img src="img/icons/download.png"> <span>Загрузить</span></a></div>
@@ -77,7 +77,7 @@
                 </div>
                 <!-- ! gallery -->
                 <div class="content__block" id="gallery">
-                    <h1 class="block__title">&#9658; Галерея</h1>
+                    <h1 class="block__title lng-gallerytitle">&#9658; Галерея</h1>
                     <div class="block__line"></div>
                     <div class="tabs">
                         <nav class="tabs__items">
@@ -929,9 +929,10 @@
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>    
-    <script src="js/script.js"></script>
     <script src="js/lang.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/popups.js"></script>
 </body>
 </html>
