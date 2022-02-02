@@ -69,4 +69,19 @@ const langArr = {
         "tat": "",
         "en": "",
     },
+    "footertitle" : {
+        "ru": "Сайт про жизнь и творчество<br>Амирхана Еники",
+        "tat": "Әмирхан Еникиның<br>тормышы hәм иҗаты турында сайт",
+        "en": "The website about the life and work<br>of Amirkhan Eniki",
+    },
+    "footertext" : {
+        "ru": "По всем вопросам и предложениям можно обратиться сюда:",
+        "tat": "Барлык сораулар hәм тәкъдимнәр буенча монда мөрәҗәгать итәргә мөмкин:",
+        "en": "You can contact here for all questions and suggestions:",
+    },
+    "footertext-1" : {
+        "ru": "<strong>&copy;</strong> Фотографии взяты с открытых источников и из личного архива А. Еники",
+        "tat": "<strong>&copy;</strong> Фотолар ачык чыганаклардан hәм Ә. Еникиның шәхси архивыннан алынды",
+        "en": "<strong>&copy;</strong> The photos are taken from open sources and from the personal archive of A. Eniki",
+    }
 }

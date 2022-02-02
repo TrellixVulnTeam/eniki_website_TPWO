@@ -164,25 +164,43 @@ ol, ul, li {
     &__burger {
         display: none;
     }
+
     &__change-lang {
-        width: 100px;
+        transition: all 0.3s ease 0s;
+
+        &.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:hover {
+            background-color: rgba(143, 0, 50, .8);
+            color: rgba(255, 255, 255, 1);
+        }
+
+        &-1 {
+            margin: 10px auto;
+        }
+    }
+
+    &__change-lang, &__change-lang-1 {
+        width: 12%;
         height: 100%;
         text-align: center;
         font-family: 'Montserrat Alternates', sans-serif;
         font-size: 20px;
         border-radius: 20px;
         border: none;
-        box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
         background-color: rgb(143, 0, 50);
         color: white;
         outline: none;
         cursor: pointer;
-        transition: .3s;
-        
-        &:hover {
-            background-color: rgba(143, 0, 50, .8);
-            color: rgba(255, 255, 255, 1);
-        }
+    }
+
+    &__adapt {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -439,7 +457,7 @@ ol, ul, li {
     &__content {
         background-color: white;
         color: black;
-        max-width: 800px;
+        max-width: 900px;
         padding: 20px;
         position: relative;
         opacity: 0;
@@ -479,7 +497,7 @@ ol, ul, li {
         
         img {
             max-height: 700px;
-            max-width: 500px;
+            max-width: 800px;
         }
     }
 
@@ -607,6 +625,10 @@ ol, ul, li {
         }
 }
 
+.lng-footertext {
+    font-weight: 600;
+}
+
 .social {
     justify-self: center;
     display: grid;
@@ -637,7 +659,7 @@ ol, ul, li {
     }
 }
 
-//! adaptiv
+//! media
 @media (max-width: 1450px) {
     .menu__link {
         font-size: 25px;
@@ -696,13 +718,21 @@ ol, ul, li {
     .menu {
         &__body {
             position: fixed;
-            top: 0;
+            top: -100%;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, .8);
             padding: 100px 30px 30px 30px;
-            transition: top 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            overflow: auto;
+
+            &::before {
+            }
+
+            &.active {
+                top: 0;
+            }
         }
         &__list {
             & > li {
@@ -726,7 +756,30 @@ ol, ul, li {
             position: relative;
             width: 30px;
             height: 18px;
+            right: 20px;
+            align-self: center;
             cursor: pointer;
+
+            &.active {
+                span {
+                    transform: scale(0) translate(0px, -50%);
+                }
+
+                span,
+                &::before,
+                &::after {
+                    background-color: #fff;
+                }
+
+                &::before {
+                    top: 50%;
+                    transform: rotate(-45deg) translate(0px, -50%);
+                }
+                &::after {
+                    bottom: 50%;
+                    transform: rotate(45deg) translate(0px, 50%);
+                }
+            }
 
             span,
             &::before,

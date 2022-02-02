@@ -174,26 +174,49 @@ ol, ul, li {
 }
 
 .menu__change-lang {
-  width: 100px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu__change-lang.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu__change-lang:hover {
+  background-color: rgba(143, 0, 50, 0.8);
+  color: white;
+}
+
+.menu__change-lang-1 {
+  margin: 10px auto;
+}
+
+.menu__change-lang, .menu__change-lang-1 {
+  width: 12%;
   height: 100%;
   text-align: center;
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 20px;
   border-radius: 20px;
   border: none;
-  -webkit-box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
-          box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
   background-color: #8f0032;
   color: white;
   outline: none;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
-.menu__change-lang:hover {
-  background-color: rgba(143, 0, 50, 0.8);
-  color: white;
+.menu__adapt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main {
@@ -489,7 +512,7 @@ ol, ul, li {
 .popup__content {
   background-color: white;
   color: black;
-  max-width: 800px;
+  max-width: 900px;
   padding: 20px;
   position: relative;
   opacity: 0;
@@ -533,7 +556,7 @@ ol, ul, li {
 
 .popup__img img {
   max-height: 700px;
-  max-width: 500px;
+  max-width: 800px;
 }
 
 .popup__text {
@@ -686,6 +709,10 @@ ol, ul, li {
       justify-self: center;
 }
 
+.lng-footertext {
+  font-weight: 600;
+}
+
 .social {
   -ms-grid-column-align: center;
       justify-self: center;
@@ -776,14 +803,18 @@ ol, ul, li {
   }
   .menu__body {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 100px 30px 30px 30px;
-    -webkit-transition: top 0.3s ease 0s;
-    transition: top 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+  .menu__body.active {
+    top: 0;
   }
   .menu__list > li {
     margin: 0px 0px 30px 0px;
@@ -804,7 +835,28 @@ ol, ul, li {
     position: relative;
     width: 30px;
     height: 18px;
+    right: 20px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     cursor: pointer;
+  }
+  .menu__burger.active span {
+    -webkit-transform: scale(0) translate(0px, -50%);
+            transform: scale(0) translate(0px, -50%);
+  }
+  .menu__burger.active span, .menu__burger.active::before, .menu__burger.active::after {
+    background-color: #fff;
+  }
+  .menu__burger.active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+            transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__burger.active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+            transform: rotate(45deg) translate(0px, 50%);
   }
   .menu__burger span, .menu__burger::before, .menu__burger::after {
     left: 0;

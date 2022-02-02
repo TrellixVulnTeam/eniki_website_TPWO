@@ -1,5 +1,6 @@
 "use strict"
 
+//! change language
 const select = document.querySelector('select');
 const langs = ['ru', 'tat', 'en']
 
@@ -47,6 +48,22 @@ $(function(){
 	});
 });	
 
+//! menu-burger 
+
+const burgerMenu = document.querySelector('.menu__burger');
+const menuBody = document.querySelector('.menu__body');
+const langButton = document.querySelector('.menu__change-lang');
+if (burgerMenu) {
+	burgerMenu.addEventListener("click", function (e) {
+		document.body.classList.toggle('lock');
+		langButton.classList.toggle('hide');
+		burgerMenu.classList.toggle('active');
+		menuBody.classList.toggle('active');
+	});
+}
+
+//! scroll
+
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
@@ -58,6 +75,13 @@ if (menuLinks.length > 0) {
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);	
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.menu').offsetHeight;
+
+			if (burgerMenu.classList.contains('active')) {
+				document.body.classList.remove('lock');
+				langButton.classList.remove('hide');
+				burgerMenu.classList.remove('active');
+				menuBody.classList.remove('active');
+			} 
 
 			window.scrollTo({
 				top: gotoBlockValue,
