@@ -2,7 +2,7 @@ const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
-const timeout = 500 ;
+const timeout = 500;
 
 let unlock = true;
 
