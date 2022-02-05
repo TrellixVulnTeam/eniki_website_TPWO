@@ -19,8 +19,8 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { svgSprive } from "./gulp/tasks/svgSprive.js";
-import { zip } from "./gulp/tasks/zip.js"
-// import { ftp } from "./gulp/tasks/ftp.js"
+import { zip } from "./gulp/tasks/zip.js";
+// import { ftp } from "./gulp/tasks/ftp.js";
 
 
 function watcher() {
