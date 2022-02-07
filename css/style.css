@@ -56,22 +56,17 @@ li {
 }
 
 #scroll-top {
-  font-family: "Nunito Sans", sans-serif;
   position: fixed;
   bottom: 30px;
   right: 30px;
   z-index: 100;
-  width: 70px;
   text-align: center;
-  font-size: 50px;
-  border: 1px solid black;
-  border-radius: 50%;
-  opacity: 0.7;
+  font-size: 70px;
+  opacity: 0.8;
 }
 
 #scroll-top:hover {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .wrapper {
@@ -249,7 +244,9 @@ li {
 .block__text-l-g,
 .block__text-r-g {
   margin: 30px 30px 30px 70px;
+  width: 75%;
   padding: 20px;
+  border-radius: 20px;
   font-size: 30px;
   font-family: "Mulish", sans-serif;
   line-height: 1.5;
@@ -283,19 +280,16 @@ li {
 .block__text-l,
 .block__text-l-g {
   background-color: rgba(0, 0, 0, 0.1);
-  width: 75%;
   margin-right: auto;
-  border-radius: 20px;
+  margin-left: 0;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .block__text-r,
 .block__text-r-g {
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 75%;
+  background-color: rgba(0, 0, 0, 0.15);
   margin-left: auto;
-  border-radius: 20px;
   -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -304,16 +298,38 @@ li {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+.block__text-l-g-1 {
+  width: 100%;
+}
+
 .block__text-r-g {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.block__parag-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 75% 25%;
+      grid-template: 1fr/75% 25%;
+}
+
 .block__img {
-  float: right;
-  margin: 5% 3% 0 0;
-  max-width: 200px;
-  border: 5px solid #350707;
-  margin-left: 15px;
+  width: 75%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.block__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .block__download-button {
@@ -341,15 +357,6 @@ li {
 
 .block__download-button:hover img {
   opacity: 1;
-}
-
-.block__download-button img {
-  width: 50px;
-  vertical-align: middle;
-  opacity: 0.7;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .block__subtext {
@@ -591,6 +598,23 @@ li {
   color: #3b0417;
 }
 
+.popup-texts__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.popup-texts__subtitle {
+  font-size: 25px;
+}
+
+.popup-texts__text {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: left;
+  text-indent: 1em;
+  font-family: "Mulish", sans-serif;
+}
+
 .popup__line {
   width: 20%;
   margin: 10px 0 10px 40%;
@@ -815,35 +839,45 @@ li {
 
 .fa-telegram-plane {
   color: #2DA5E1;
+  text-shadow: none;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .fa-telegram-plane:hover {
-  color: #217eac;
+  color: #2DA5E1;
+  text-shadow: 0 0 20px #217eac;
 }
 
 .fa-instagram {
   color: #ff085f;
+  text-shadow: none;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .fa-instagram:hover {
-  color: #b41950;
+  color: #ff085f;
+  text-shadow: 0 0 20px #b41950;
 }
 
 .fa-vk {
   color: #0077FF;
+  text-shadow: none;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .fa-vk:hover {
+  text-shadow: 0 0 20px #0077FF;
   color: #1359a8;
+}
+
+.fa-download {
+  margin-right: 10px;
 }
 
 @media (min-width: 992px) {
@@ -921,6 +955,21 @@ li {
   .block__text {
     font-size: 25px;
     margin: 10px 20px;
+  }
+
+  .fa-telegram-plane:hover {
+    color: #2DA5E1;
+    text-shadow: none;
+  }
+
+  .fa-instagram:hover {
+    color: #ff085f;
+    text-shadow: none;
+  }
+
+  .fa-vk:hover {
+    text-shadow: none;
+    color: #0077FF;
   }
 
   .menu__body {
