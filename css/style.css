@@ -680,7 +680,7 @@ ol, ul, li {
   .header__menu {
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none;
-    height: 50px;
+    height: 100px;
   }
 
   .block__title {
@@ -698,6 +698,11 @@ ol, ul, li {
   }
   .block__img {
     width: 25%;
+  }
+
+  .popup__img img {
+    max-height: 700px;
+    max-width: 600px;
   }
 
   .fa-telegram-plane:hover {
@@ -718,18 +723,21 @@ ol, ul, li {
   .menu__body {
     position: fixed;
     top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    right: -100%;
+    min-width: 50%;
+    min-height: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 100px 30px 30px 30px;
+    border-bottom-left-radius: 50px;
     transition: all 0.3s ease 0s;
     overflow: auto;
   }
   .menu__body.active {
     top: 0;
+    right: 0;
   }
   .menu__list {
+    text-align: center;
     grid-template: 1fr/1fr 1fr 1fr 1fr;
   }
   .menu__list > li {
@@ -754,7 +762,7 @@ ol, ul, li {
     display: block;
     position: relative;
     width: 45px;
-    height: 27px;
+    height: 36px;
     margin-left: auto;
     top: 25%;
     right: 3%;
